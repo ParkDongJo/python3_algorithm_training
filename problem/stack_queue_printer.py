@@ -18,10 +18,10 @@ def solution(priorities, location):
         curr = queue[0]
         top = heap[0]
 
-        if curr == top:
+        if curr['val'] == top[1]:
             queue.pop(0)
             heapq.heappop(heap)
-            if curr.tag:
+            if curr['tag']:
                 answer
                 break
         else:
