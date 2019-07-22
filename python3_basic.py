@@ -102,4 +102,4 @@ print(txt4.lower()) # 대문자를 소문자로 변환
 print(txt4.strip()) # 양쪽 공백 제거
 print(txt4.replace("parkdongjo", "parkcharles")) # 지정한 문자열을 변경
 print(txt4.split()) # 공백을 기준으로 배열에 문자열을 나누어 준다
-print(",".join(txt4).split(","))
+print(",".join(txt4).split(",")) # 문자열의 각각의 문자 사이에 ','를 삽입한다.

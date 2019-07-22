@@ -6,6 +6,12 @@
 
 '''
 1. 리스트
+
+    list.index( value ) : 값을 이용하여 위치를 찾는 기능
+    list.extend( [value1, value2] ) : 리스트 뒤에 값을 추가 (‘+’연산자 보다 성능이 좋음)
+    list.insert( index, value ) : 원하는 위치에 값을 추가
+    list.sort( ) : 값을 순서대로 정렬
+    list.reverse( ) : 값을 역순으로 정렬
 '''
 list1 = []
 list2 = [1,2]
