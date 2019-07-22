@@ -1,3 +1,7 @@
+'''
+[프로그래머스 큐 문제]
+
+'''
 def solution(arrangement):
     answer = 0
     stack = []

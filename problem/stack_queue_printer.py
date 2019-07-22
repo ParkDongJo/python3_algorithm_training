@@ -1,3 +1,8 @@
+'''
+[프로그래머스 큐 문제]
+
+'''
+
 import heapq
 
 def solution(priorities, location):
