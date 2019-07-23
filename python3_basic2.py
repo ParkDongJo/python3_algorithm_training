@@ -89,3 +89,22 @@ dic3.clear() # clear()
 print(dic3)
 print(dic4.get(1)) # get(x)
 print(2 in dic4) # x in list
+
+
+'''
+    파이썬 특수 컨테이너 타입 
+    collection의 내장 메서드들
+    * 자주 쓰이는 것에 표시해둠!!
+
+    namedtuple() : factory function for creating tuple subclasses with named fields
+    deque() : list-like container with fast appends and pops on either end
+    ChainMap() : dict-like class for creating a single view of multiple mappings
+    * Counter() : dict subclass for counting hashable objects
+    * OrderedDict() : dict subclass that remembers the order entries were added
+    defaultdict() : dict subclass that calls a factory function to supply missing values
+    UserDict() : wrapper around dictionary objects for easier dict subclassing
+    UserList() : wrapper around list objects for easier list subclassing
+    UserString() : wrapper around string objects for easier string subclassing
+
+
+'''
