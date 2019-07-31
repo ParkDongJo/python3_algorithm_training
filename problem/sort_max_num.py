@@ -55,14 +55,22 @@ def solution(numbers):
     Correctness: 81.8
     합계: 81.8 / 100.0
 '''
+'''
+1. 동일한 숫자가 입력될 수 있다는 점
+2. "0000" → "0" 으로 출력해야하는 점
+'''
+
 def another_solution(numbers):
-    list = merge_sort(numbers)
-    return ''.join(str(e) for e in list)
+    list = [str(e) for e in numbers]
+    result = merge_sort(list)
+    if result[0] == '0':
+        return 0
+    else:
+        return ''.join(result)
 
 def merge_sort(list):
     if len(list) <= 1:
         return list
-
     mid = len(list) // 2
     leftList = list[:mid]
     rightList = list[mid:]
@@ -74,20 +82,10 @@ def merge(left, right):
     result = []
     while len(left) > 0 or len(right) > 0:
         if len(left) > 0 and len(right) > 0:
-            s_prev = str(left[0])
-            s_next = str(right[0])    
 
-            if s_prev[0] < s_next[0]:
+            if (left[0] + right[0]) < (right[0] + left[0]):
                 result.append(right[0])
                 right = right[1:]
-
-            elif s_prev[0] == s_next[0]:
-                if (s_prev + s_next) < (s_next + s_prev):
-                    result.append(right[0])
-                    right = right[1:]
-                else:
-                    result.append(left[0])
-                    left = left[1:]
             else:
                 result.append(left[0])
                 left = left[1:]
@@ -103,3 +101,4 @@ def merge(left, right):
 
 # print(solution([1, 31, 30, 3, 34, 54, 5, 9, 872]))
 print(another_solution([1, 31, 30, 3, 34, 54, 5, 9, 872]))
+print(another_solution([0,0,0]))
